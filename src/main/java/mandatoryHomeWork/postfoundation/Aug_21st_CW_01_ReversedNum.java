@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Aug_19th_CW_01_ReversedNum {
+public class Aug_21st_CW_01_ReversedNum {
 	
 	@Test
 	public void test1()
