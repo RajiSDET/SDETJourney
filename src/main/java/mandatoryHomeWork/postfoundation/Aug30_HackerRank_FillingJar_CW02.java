@@ -4,15 +4,6 @@ import java.util.ArrayList;
 
 public class Aug30_HackerRank_FillingJar_CW02 {
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
