@@ -7,7 +7,13 @@ public class Sep_5th_CW_02_LargetElementinArray {
 	@Test
 	public void test1()
 	{
-		Assert.assertEquals(5,LargestEle(new int[] {1,5,3,2,4}) );
+		Assert.assertEquals(9,LargestEle(new int[] {4,1,0,-7,5,9,2}) );
+	}
+	
+	@Test
+	public void test3()
+	{
+		Assert.assertEquals(-1,LargestEle(new int[] {-4,-1,-7,-5,-9,-2}) );
 	}
 	
 	@Test
@@ -18,7 +24,7 @@ public class Sep_5th_CW_02_LargetElementinArray {
 	
 	public int LargestEle(int[] inputarr)
 	{
-		int max=0;
+		int max=inputarr[0];
 		
 		for (int i = 0; i < inputarr.length; i++) {
 			if(max<inputarr[i])
