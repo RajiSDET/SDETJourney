@@ -19,7 +19,7 @@ public class Sep_4th_CW_02_2Darray_Manipulation {
 	}
 	
 	public  List<Integer> printMatrix(int mat[][]){
-        // Write your code here.
+       
 		List<Integer> OutPutList = new ArrayList<Integer>();
 		
  		for(int i=0;i<mat.length;i++)
