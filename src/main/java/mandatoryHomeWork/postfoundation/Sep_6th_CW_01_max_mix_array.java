@@ -20,6 +20,13 @@ public class Sep_6th_CW_01_max_mix_array {
 		Assert.assertEquals(3,minimizeIt(new int[] {1,2,3,4,5},2) );
 	}
 	
+	@Test
+	public void test3()
+	{
+		Assert.assertEquals(0,minimizeIt(new int[] {8},2) );
+	}
+	
+	
 	 public static int minimizeIt(int[] A, int K) {
 	        
 	        for (int i = 0; i < A.length; i++) {
