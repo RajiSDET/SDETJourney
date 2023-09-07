@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Sep5th_HW_01_String_is_Acronym {
+public class Sep4th_HW_01_String_is_Acronym {
 	
 	@Test
 	public void test1()

@@ -2,7 +2,7 @@ package mandatoryHomeWork.postfoundation;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Sep_6th_HW_01_max_num_of_words_in_sentence {
+public class Sep_5th_HW_01_max_num_of_words_in_sentence {
 	@Test
 	public void test1()
 	{

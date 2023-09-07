@@ -33,7 +33,7 @@ public class Sep7th_CW_Beautiful_String {
 	@Test
 	public void test5()
 	{
-		Assert.assertEquals(2, BeautifyString("1001"));
+		Assert.assertEquals(6, BeautifyString("01010010101"));
 	}
 	
 	
@@ -123,6 +123,7 @@ Input - String STR
 Output - int count 
 
 1. Convert String to Array 
+
 2. Check the first if index is 0 -> 
 a.Check if all even index is 0 if not replace it with 0 and count the number times we corrected if not equal 
 b.Check if all odd index is 1 if not replace it with 1 and count the number times we corrected if not equal
