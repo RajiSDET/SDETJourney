@@ -4,11 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class Sep_11th_HW_01_faulty_keyboard {
+	
 	@Test
 	public void test1()
 	{
 		Assert.assertEquals("ponter",finalString("poiinter"));
 	}
+	
 	@Test
 	public void test2()
 	{
@@ -35,12 +37,9 @@ public class Sep_11th_HW_01_faulty_keyboard {
 
 /* PSEUDO CODE
  
- Input - String s
+ Input  - String s
  Output - String output
- 
- 
- 
- 
+  
  */
 
 /*https://leetcode.com/problems/faulty-keyboard/description/
