@@ -14,21 +14,21 @@ public class Rough {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
-		int[] arr = {1,2,3,4,5};
-		int n = arr.length;
-		int k=3;
+		String s = "poiinter";
+	    StringBuilder sb = new StringBuilder();
 		
-		List<Integer> outputList = new ArrayList<Integer>(n);
-		
-		for (int i = k; i < n; i++) {
-			outputList.add(arr[i]);
-			}
-		for (int i = 0; i < k; i++) {
-			outputList.add(arr[i]);
-			}
-		
-		System.out.println(outputList);
-		
+	    for (int i = 0; i < s.length(); i++) 
+	    {
+	    	sb.append(s.charAt(i));
+	    	if(s.charAt(i)=='i')
+	    	{
+	    		sb.reverse();
+	    			    		
+	    	}
+			
+		}
+	    
+	    System.out.println(sb.toString().replace("i", ""));
 		
 			
 }}
