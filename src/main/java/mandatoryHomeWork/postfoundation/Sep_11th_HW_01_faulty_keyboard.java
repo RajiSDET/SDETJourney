@@ -1,6 +1,35 @@
 package mandatoryHomeWork.postfoundation;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Sep_11th_HW_01_faulty_keyboard {
+	@Test
+	public void test1()
+	{
+		Assert.assertEquals("ponter",finalString("poiinter"));
+	}
+	@Test
+	public void test2()
+	{
+		Assert.assertEquals("rtsng",finalString("string"));
+	}
+	
+	public String finalString(String s) {
+        StringBuilder sb = new StringBuilder();
+		
+	    for (int i = 0; i < s.length(); i++) 
+	    {
+	    	sb.append(s.charAt(i));
+	    	if(s.charAt(i)=='i')
+	    	{
+	    		sb.reverse();
+	    	}
+			
+		}
+	   
+        return sb.toString().replace("i", "");
+    }
 
 }
 
