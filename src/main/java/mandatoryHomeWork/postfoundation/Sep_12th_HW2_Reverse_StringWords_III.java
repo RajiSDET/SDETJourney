@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Sep_12th_CW2_Reverse_StringWords_III {
+public class Sep_12th_HW2_Reverse_StringWords_III {
 	
 	@Test
 	public void test1()
