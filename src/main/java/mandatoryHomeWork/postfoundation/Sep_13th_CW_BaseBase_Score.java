@@ -12,7 +12,17 @@ public class Sep_13th_CW_BaseBase_Score {
 	@Test
 	public void test1()
 	{
-		Assert.assertEquals(30, calPoints(new String[] {"5","2","D","2","1"}));
+		Assert.assertEquals(30, calPoints(new String[] {"5","2","C","D","+"}));
+	}
+	
+	public boolean isInteger( String input ) {
+	    try {
+	        Integer.parseInt( input );
+	        return true;
+	    }
+	    catch( Exception e ) {
+	        return false;
+	    }
 	}
 	
 public int calPoints(String[] operations) 
@@ -22,28 +32,30 @@ public int calPoints(String[] operations)
 	
 	for (int i = 0; i < operations.length; i++) 
 	{
-		if((operations[i]!=("D")))
+		if(isInteger(operations[i]))
 		{
 		  tempList.add(Integer.parseInt(operations[i]));
 		}
-	
 		
-				
-		if(operations[i]=="C")
+		else if(operations[i]=="C")
 		{
-			tempList.remove(i-1);	
 			
 		}
-		if(operations[i]=="D")
+		
+		else if(operations[i]=="D")
 		{
-			tempList.add(2*tempList.get(i-1));
-		}
-		if(operations[i]=="+")
-		{
-			tempList.add(tempList.get(i-1)+tempList.get(i-2));
+		
+			//tempList.add(2*tempList.get(i-1));
+			
 		}
 		
-	}
+		else if(operations[i]=="+")
+		{
+			//tempList.add(tempList.get(i-1)+tempList.get(i-2));
+		}
+		}
+		
+	
 	
 	for (int i = 0; i < tempList.size(); i++) {
 		Points+=tempList.get(i);
