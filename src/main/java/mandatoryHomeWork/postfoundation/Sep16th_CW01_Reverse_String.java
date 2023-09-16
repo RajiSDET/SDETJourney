@@ -9,12 +9,29 @@ public class Sep16th_CW01_Reverse_String {
 	@Test
 	public void test1()
 	{
-		Assert.assertEquals("IMHSKALAJAR", reverseStr("RAJALAKSHMI"));
+		Assert.assertEquals("IMHSKALAJAR", two_pointer("RAJALAKSHMI"));
 	}
 	@Test
 	public void test2()
 	{
 		Assert.assertEquals("UHSESURUG", reverseStr2("GURUSESHU"));
+	}
+	
+	public String two_pointer(String str)
+	{   
+		char[] charArray = str.toCharArray();
+		char temp;
+		int startindex = 0;
+		int lastindex = charArray.length-1;
+		
+		while(startindex<lastindex)
+		{
+			temp=charArray[startindex];
+			charArray[startindex++]=charArray[lastindex];
+			charArray[lastindex--]=charArray[startindex];
+		}
+		
+		return new String(charArray);
 	}
 	
 	public String reverseStr(String str)
