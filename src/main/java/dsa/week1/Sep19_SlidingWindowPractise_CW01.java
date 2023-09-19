@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Sep19_CW01 {
+public class Sep19_SlidingWindowPractise_CW01 {
 	
 	@Test
 	public void test1()
