@@ -50,8 +50,8 @@ public class SEP18_twopointer_practise_CW01 {
 	public int counter_2_pointer(int[] A, int[] B)
 	{
 		int counter = 0;
-		for (int i = 0; i < A.length; i++) {
-			for (int j = 0; j < B.length; j++) {
+		for(int i = 0; i < A.length; i++){
+			for (int j = 0; j < B.length; j++){
 				if(A[i]==B[j])
 				{
 					counter++;
@@ -64,7 +64,6 @@ public class SEP18_twopointer_practise_CW01 {
 }
 
 /*PSEUDO CODE 2 pointer
- Sort both the arrays 
  have an index i scanning the array A
  have an index j scanning the array B
  whenever A[i] == B[j] increment the counter;
