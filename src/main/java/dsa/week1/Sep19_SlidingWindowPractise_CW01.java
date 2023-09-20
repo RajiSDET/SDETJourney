@@ -2,7 +2,7 @@ package dsa.week1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -15,7 +15,7 @@ public class Sep19_SlidingWindowPractise_CW01 {
 	@Test
 	public void test1()
 	{
-		List<Integer> expected = new ArrayList<Integer>();
+		Set<Integer> expected = new LinkedHashSet<Integer>();
 		expected.add(6);
 		expected.add(4);
 		Assert.assertEquals(expected, bruteforce_sol(new int[] {5, 6, 8, 2, 4, 6, 4},4));
@@ -24,24 +24,66 @@ public class Sep19_SlidingWindowPractise_CW01 {
 	@Test
 	public void test2()
 	{
-		List<Integer> expected = new ArrayList<Integer>();
+		Set<Integer> expected = new LinkedHashSet<Integer>();
 		expected.add(6);
 		expected.add(4);
+		
 		Assert.assertEquals(expected, Sliding_window(new int[] {5, 6, 8, 2, 4, 6, 4},4));
 	}
 	
-	public List bruteforce_sol(int[] input,int k)
+
+	@Test
+	public void test3()
+	{
+		Set<Integer> expected = new LinkedHashSet<Integer>();
+		expected.add(6);
+		expected.add(8);
+		expected.add(2);
+		Assert.assertEquals(expected, bruteforce_sol(new int[] {5,6,8,2,4,6,8,2},4));
+	}
+	
+	@Test
+	public void test4()
+	{
+		Set<Integer> expected = new LinkedHashSet<Integer>();
+		expected.add(2);
+		expected.add(1);
+		Assert.assertEquals(expected, bruteforce_sol(new int[] {1,2,2,1,1},2));
+	}
+	
+	@Test
+	public void test5()
+	{
+		Set<Integer> expected = new LinkedHashSet<Integer>();
+		expected.add(1);
+		expected.add(2);
+		
+		Assert.assertEquals(expected, bruteforce_sol(new int[] {1,2,1,2,1},3));
+	}
+	
+	@Test
+	public void test6()
+	{
+		Set<Integer> expected = new LinkedHashSet<Integer>();
+		Assert.assertEquals(expected, bruteforce_sol(new int[] {1,2,3,4},4));
+	}
+	
+		
+	public Set bruteforce_sol(int[] input,int k)
 	{
 		int counter=0;
-		List<Integer> output = new ArrayList<Integer>();
+		Set<Integer> output = new LinkedHashSet<Integer>();
 		for (int i = 0; i < input.length-k; i++) {
-			Set<Integer> tempSet = new HashSet<Integer>();
+			Set<Integer> tempSet = new LinkedHashSet<Integer>();
 			for (int j = i; j <=i+k; j++) 
 			{		
 				if(!tempSet.add(input[j]))
 				{
+					if(!output.contains(input[j]))
+					{
 					output.add(input[j]);
 					counter++;
+					}
 				}
 				System.out.println(Arrays.asList(tempSet));
 				
@@ -52,11 +94,11 @@ public class Sep19_SlidingWindowPractise_CW01 {
 	}
 
 	
-	public List Sliding_window(int[] input,int k)
+	public Set Sliding_window(int[] input,int k)
 	{
 		
-		List<Integer> output = new ArrayList<Integer>();
-		Set<Integer> tempSet = new HashSet<Integer>();
+		Set<Integer> output = new LinkedHashSet<Integer>();
+		Set<Integer> tempSet = new LinkedHashSet<Integer>();
 		int pointer = 0;
 		// not needed second pointer as this is balanced traversal ,right= k+1; 
 		
