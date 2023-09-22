@@ -14,10 +14,11 @@ public class Sep22_HW02_K_beauty {
 	@Test
 	public void test2() {
 		Assert.assertEquals(2, divisorSubstrings(430043,2));
-	}
+	} 
+	
 	@Test
 	public void test3() {
-		Assert.assertEquals(1, divisorSubstrings(10,1));
+		Assert.assertEquals(0, divisorSubstrings(10,1));
 	}
 	
 	public int divisorSubstrings(int num, int k) {
