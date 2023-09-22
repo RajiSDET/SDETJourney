@@ -21,9 +21,14 @@ public class Sep22_HW02_K_beauty {
 		Assert.assertEquals(1, divisorSubstrings(10,1));
 	}
 	
+	@Test
+	public void test4() {
+		Assert.assertEquals(1, divisorSubstrings(10,1));
+	}
+	
 	public int divisorSubstrings(int num, int k) {
 	    int k_beauty=0;
-			String Str=""+num;
+			String Str=""+num;  
 					
 			for (int i = 0; i <= Str.length()-k; i++) {
 				StringBuilder sb= new StringBuilder();
