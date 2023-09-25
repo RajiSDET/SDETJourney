@@ -9,25 +9,37 @@ public class Sep23_CW_01_Palindrome_2pointer {
 	@Test
 	public void test1()
 	{
-		Assert.assertEquals(false,ExpandFromCentre("RAJI"));
+		Assert.assertEquals(false,SingleLine("RAJI"));
 	}
 	
 	@Test
 	public void test2()
 	{
-		Assert.assertEquals(true,ExpandFromCentre("RADAR"));
+		Assert.assertEquals(true,SingleLine("RADAR"));
 	}
 	
 	@Test
 	public void test3()
 	{
-		Assert.assertEquals(true,ExpandFromCentre("RaDaR"));
+		Assert.assertEquals(true,SingleLine("RaDaR"));
 	}
 	
 	@Test
 	public void test4()
 	{
-		Assert.assertEquals(false,ExpandFromCentre("TATA"));
+		Assert.assertEquals(false,SingleLine("TATA"));
+	}
+	
+	@Test
+	public void test5()
+	{
+		Assert.assertEquals(true,numPalinCheck(1221));
+	}
+	
+	@Test
+	public void test6()
+	{
+		Assert.assertEquals(true,numPalinCheck(12121));
 	}
 	
 	public boolean PalindromeCheck(String s)
@@ -74,4 +86,20 @@ public class Sep23_CW_01_Palindrome_2pointer {
 		return true;
 		
 	}
+
+  public boolean SingleLine(String s)
+   {
+	s=s.toLowerCase();
+	return new StringBuffer(s).reverse().toString().equals(s);
+   }
+
+
+  public boolean numPalinCheck(int num)
+  {
+	  {
+			String s=""+num;
+			return new StringBuffer(s).reverse().toString().equals(s);
+		   }
+	 
+  }
 }
