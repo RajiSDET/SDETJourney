@@ -2,7 +2,7 @@
 
 public class Sep19_HW_01_smallest_Palindrome {
 	
-	public class PalindromeGenerator {
+	
 	    
 	    public  String makePalindrome(String s) {
 	        char[] strArray = s.toCharArray();
@@ -20,7 +20,7 @@ public class Sep19_HW_01_smallest_Palindrome {
 	    }
 
 	   
-	}
+	
 
 
 }
