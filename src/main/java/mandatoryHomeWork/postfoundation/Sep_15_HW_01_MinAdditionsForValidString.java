@@ -1,6 +1,6 @@
 package mandatoryHomeWork.postfoundation;
 
-public class Sep_19_HW_01_MinAdditionsForValidString {
+public class Sep_15_HW_01_MinAdditionsForValidString {
 	
 	public int addMinimum(String word) {
         int k = 0, prev = 'z', n = word.length();
