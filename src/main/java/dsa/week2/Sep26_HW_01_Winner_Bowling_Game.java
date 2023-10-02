@@ -1,6 +1,27 @@
 package dsa.week2;
 
 public class Sep26_HW_01_Winner_Bowling_Game {
+	
+	public int isWinner(int[] player1, int[] player2) {
+	      int p1 = score(player1);
+	        int p2 = score(player2);
+	        
+	        if(p1>p2) return 1;
+	        else if(p1<p2) return 2;
+	        return 0;
+	    }
+	    private int score(int[] play){
+	        int sum = 0;
+	        for(int i=0; i<play.length; i++){
+	            if((i-1>=0 && play[i-1]==10) || (i-2>=0 && play[i-2]==10)) {
+	                sum += 2*play[i];
+	            } else {
+	                sum += play[i];
+	            }
+	        }
+	        return sum;  
+	    }
+	
 
 }
 
