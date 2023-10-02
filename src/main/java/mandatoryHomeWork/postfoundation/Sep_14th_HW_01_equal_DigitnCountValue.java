@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Sep_13th_HW_01_equal_DigitnCountValue {
+public class Sep_14th_HW_01_equal_DigitnCountValue {
 	
 	@Test
 	public void test1()

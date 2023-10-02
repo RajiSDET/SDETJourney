@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Sep_12th_HW1_Shuffle_String {
+public class Sep_13th_HW1_Shuffle_String {
 	
 	@Test
 	public void test1()

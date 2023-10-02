@@ -20,7 +20,8 @@ public class Rough {
 			if(Math.abs(s.charAt(i)-s.charAt(i+1))==32)
 			subStrings.add(s.substring(i));
 		}
-		System.out.println(subStrings);
+		System.out.println(300/100);
+		System.out.println(300%100);
 		
 		int maxlen=subStrings.get(0).length();
 		NiceString=subStrings.get(0);

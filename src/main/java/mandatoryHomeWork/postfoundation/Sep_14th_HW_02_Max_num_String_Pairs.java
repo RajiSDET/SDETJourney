@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class Sep_13th_HW_02_Max_num_String_Pairs {
+public class Sep_14th_HW_02_Max_num_String_Pairs {
 	
 	@Test
 	public void test1()
