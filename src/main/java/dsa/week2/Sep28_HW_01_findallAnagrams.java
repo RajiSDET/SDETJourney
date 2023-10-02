@@ -39,6 +39,7 @@ public class Sep28_HW_01_findallAnagrams {
 			while(end<s.length())
 			{
 				String temp = "";
+				boolean flag = true;
 				ConcurrentHashMap<Character, Integer> cMap = new ConcurrentHashMap<Character, Integer>();
 				
 				for(int i = start;i<=end;i++)
@@ -46,22 +47,26 @@ public class Sep28_HW_01_findallAnagrams {
 					temp+=s.charAt(i);
 					
 				}
-						
+				
+				
+				 int[] arr = new int[26];		
 				for (int i = 0; i < p.length(); i++) {
-					char c1 = p.charAt(i);
-					char c2 = temp.charAt(i);
-					cMap.put(c1, cMap.getOrDefault(c1, 0) + 1);
-					cMap.put(c2, cMap.getOrDefault(c2, 0) - 1);
+					arr[temp.charAt(i)-'a']++;
+                    arr[p.charAt(i)-'a']--;
+				}
+				
+				for(int i=0;i<arr.length;i++) {
+                    if(arr[i]!=0) {
+                            flag=false;
+                    }
 				}
 				 
-				if(cMap.values().stream().allMatch(count->count==0)) 
+				if(flag==true) 
 				{
 					output.add(start);
 				}		
 					
-				 
-				
-						
+				 						
 				start++;
 				end++;
 				
