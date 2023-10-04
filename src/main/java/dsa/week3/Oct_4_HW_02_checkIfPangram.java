@@ -18,6 +18,28 @@ public class Oct_4_HW_02_checkIfPangram {
 		return true;
 	        
 	    }
+	 
+	 /*Using Frequency Count Approach */
+	 
+	 public boolean checkIfPangram2(String sentence) {
+		 
+		 int[] charindexArr= new int[26];
+			for (int i = 0; i < sentence.length(); i++) {
+				charindexArr[sentence.charAt(i)-'a']++;
+			} 
+			
+			for (int i = 0; i < charindexArr.length; i++) {
+				if(charindexArr[i]==0)
+				{
+					return false;
+				}
+			}
+			
+			return true;
+		        
+		    }
+	 
+	 
 	
 
 }
