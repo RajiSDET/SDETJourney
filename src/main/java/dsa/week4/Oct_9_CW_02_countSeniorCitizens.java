@@ -1,6 +1,6 @@
 package dsa.week4;
 
-public class Oct_10_CW_02_countSeniorCitizens {
+public class Oct_9_CW_02_countSeniorCitizens {
 	
     public int countSeniors(String[] details) {
         int counter=0;

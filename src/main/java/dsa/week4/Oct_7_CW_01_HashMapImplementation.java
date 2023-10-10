@@ -2,21 +2,7 @@ package dsa.week4;
 
 public class Oct_7_CW_01_HashMapImplementation {
 	
-public MyHashMap() {
-        
-    }
-    
-    public void put(int key, int value) {
-        
-    }
-    
-    public int get(int key) {
-        
-    }
-    
-    public void remove(int key) {
-        
-    }
+
 
 }
 
