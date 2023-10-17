@@ -4,7 +4,7 @@ public class OCT_09_HW02_numEquivDominoPairs {
 
 }
 
-/*https://leetcode.com/problems/number-of-equivalent-domino-pairs/
+/*99
  1128. Number of Equivalent Domino Pairs
 
 Given a list of dominoes, dominoes[i] = [a, b] is equivalent to dominoes[j] = [c, d] 

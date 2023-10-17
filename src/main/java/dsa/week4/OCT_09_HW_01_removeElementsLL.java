@@ -9,7 +9,8 @@ public class OCT_09_HW_01_removeElementsLL
         while(temp!=null && temp.next !=null) {
             if(temp.next.val == val) {
                 temp.next = temp.next.next;
-            }else{
+            }else
+            {
                 temp = temp.next;
             }
         }
