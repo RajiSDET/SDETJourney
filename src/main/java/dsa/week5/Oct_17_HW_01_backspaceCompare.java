@@ -31,49 +31,55 @@ public boolean backspaceCompare(String s, String t) {
 	Stack<Character> stack_s = new Stack<>();
 	Stack<Character> stack_t = new Stack<>();
 	
-	
-	for (int i = 0; i < s.length(); i++) 
-	{
-		
+	for (int i = 0; i < s.length(); i++) {
+		 
 		if(s.charAt(i)=='#')
+		 {
+			 if(!stack_s.isEmpty())
+				{
+				 stack_s.pop();
+				}
+			 
+			 else if(stack_s.isEmpty())
+				{
+				 continue;
+				}
+		 }
+		else
 		{
-			stack_s.pop();
+			 stack_s.push(s.charAt(i));
 		}
-		stack_s.push(s.charAt(i));
+			
 	}
 	
-	s="";
-	
-	for(Character c : stack_s)
-    {
- 	   s+=c;
-    }
-	
-	for (int i = 0; i < t.length(); i++) 
-	{
+	for (int i = 0; i < t.length(); i++) {
+		 
 		if(t.charAt(i)=='#')
+		 {
+			 if(!stack_t.isEmpty())
+				{
+				 stack_t.pop();
+				}
+			 
+			 else if(stack_t.isEmpty())
+				{
+				 continue;
+				}
+		 }
+		else
 		{
-			stack_t.pop();
+			 stack_t.push(t.charAt(i));
 		}
-		stack_t.push(t.charAt(i));
+			
 	}
 	
-	t="";
+	System.out.println(stack_s.equals(stack_t));
 	
-	for(Character c : stack_t)
-    {
- 	   t+=c;
-    }
-	System.out.println(t);
 	
-	return (s.equals(t)); // try comparing the stack directly 
-        
-    }
-
-  while(!stack_s.empty()) {
-	stack_s.pop();
-}
-}
+	
+	return stack_s.equals(stack_t);
+	
+}}
  
 /*PSEUDO CODE - Handle continuous ## - Do nothing in those cases 
  INPUTS - String s String t 
