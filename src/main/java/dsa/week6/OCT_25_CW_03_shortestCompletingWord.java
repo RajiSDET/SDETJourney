@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 
 public class OCT_25_CW_03_shortestCompletingWord {
 	
-public String shortestCompletingWord(String licensePlate, String[] words) {
+
 	public String shortestCompletingWord(String licensePlate, String[] words) {
 	      
 		String output = null ;
