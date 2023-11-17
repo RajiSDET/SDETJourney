@@ -1,7 +1,52 @@
 package dsa.week10;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+import junit.framework.Assert;
+
 public class Nov_17_numIdenticalPairs {
 	
+	@Test
+	public void test1() {
+		Assert.assertEquals(4, numIdenticalPairs_Map(new int[] {1,2,3,1,1,3}));
+	}
+	
+	@Test
+	public void test2() {
+		Assert.assertEquals(6, numIdenticalPairs_Map(new int[] {1,1,1,1}));
+	}
+	
+	@Test
+	public void test3() {
+		Assert.assertEquals(0, numIdenticalPairs_Map(new int[] {1,2,3}));
+	}
+	
+	
+	// Approach 2 
+	 public int numIdenticalPairs_Map(int[] nums) {
+	        
+		 int counter=0;
+		 Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+		 for (int i = 0; i < nums.length; i++) {
+			map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
+		 }
+		 
+		 for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+		
+			if(entry.getValue()>1) {
+				Integer value = entry.getValue();
+				counter+=(value*(value-1))/2;
+			}
+			
+		}
+		 
+		 
+		 return counter;
+	    }
+	// Approach 1
 	 public int numIdenticalPairs(int[] nums) {
 	        
 		 int counter=0;
