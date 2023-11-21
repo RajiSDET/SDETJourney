@@ -3,20 +3,19 @@ package dsa.week11;
 public class CW02_Nov20_MaxSumSubArray {
 	
 	public int maxSubArray(int[] nums) {
-        int max_sum=Integer.MIN_VALUE;
+        int curr_sum =0,max_sum=Integer.MIN_VALUE;
 				if(nums.length<=1){
 max_sum=nums[0];
 				}
 	for (int i = 0; i < nums.length; i++) {
-		int curr_sum=0;
-		for (int j = i; j < nums.length; j++) {
-			curr_sum+=nums[j];
+			curr_sum+=nums[i];
 			if(curr_sum>max_sum) {
 				max_sum=curr_sum;
 			}
+			 curr_sum-=nums[i];
 		}
 		
-	}
+	
 	return max_sum;
     }
 
